@@ -34,7 +34,7 @@ Calculadora/
 
   1. **Clone o repositório**:
   ```
-  git clone https://github.com/usuario/repo.git
+  git clone https://github.com/Casx1/Documentos-CompassUOL.git
   ```
   2. **Após o clone, entre no diretório do projeto:**
   ```
