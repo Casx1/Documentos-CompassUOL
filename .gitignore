@@ -18,7 +18,7 @@ __pycache__/
 venv/
 env/
 
-# Testes e relatórios
+# Testes e relatorios
 .pytest_cache/
 .cache/
 coverage.xml
