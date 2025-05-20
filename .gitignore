@@ -1,0 +1,34 @@
+cat <<EOF > .gitignore
+# macOS
+.DS_Store
+Documentos/**/.DS_Store
+
+# IDEs (PyCharm / IntelliJ)
+.idea/
+*.iml
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Ambientes virtuais
+.env
+.venv/
+venv/
+env/
+
+# Testes e relatórios
+.pytest_cache/
+.cache/
+coverage.xml
+htmlcov/
+*.log
+
+# VSCode (caso use em paralelo)
+.vscode/
+
+# Arquivos temporários de edição
+*.swp
+*~
+EOF
