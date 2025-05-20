@@ -18,7 +18,9 @@ Token de cesso Gerado com Sucesso
 Listando bookings
     GET GetBookingIds
 Buscando bookings por ID
-    GET GetBooking
+    ${booking_id}=    Set Variable    1
+    GET GetBooking    ${booking_id}
+
 Criando booking
     POST CreateBooking
 Atualizando booking existente
