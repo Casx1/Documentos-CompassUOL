@@ -2,13 +2,13 @@
 
 Este repositório contém a automação de testes da API [Restful-Booker](https://restful-booker.herokuapp.com/apidoc/index.html), utilizando Robot Framework. O objetivo é garantir a validação de todos os endpoints fornecidos, com uma estrutura modular, reutilizável e de fácil manutenção.
 
-## 🔧 Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 - [Robot Framework](https://robotframework.org/)
 - [RequestsLibrary](https://marketsquare.github.io/robotframework-requests/)
 - Python 3.x
 
-## 📁 Estrutura do Projeto
+##  Estrutura do Projeto
 
 ```
 RestFulBooker/
@@ -27,7 +27,7 @@ RestFulBooker/
 ├── requirements.txt              # Dependências do projeto
 ```
 
-## ▶️ Executando os Testes
+##  Executando os Testes
 
 ### 1. Clonar o repositório
 
@@ -55,7 +55,7 @@ pip install -r requirements.txt
 robot tests/tests.robot
 ```
 
-## 📌 Observações
+##  Observações
 
 - Os arquivos da pasta `keywords/` foram separados por endpoint para maior organização e reutilização.
 - O arquivo `_base.robot` contém configurações reutilizáveis (URL base, headers, etc).
