@@ -52,7 +52,7 @@ Calculadora/
 
 O programa solicitará ao usuário que insira dois números e a operação matemática desejada, e então calculará e exibirá o resultado.
 
-### Como Rodar os Testes
+### Como Rodar os Testes 
 O projeto inclui testes unitários para garantir que as operações matemáticas estejam funcionando corretamente. Para rodar os testes, siga os passos abaixo:
 
 1. **Instale o pytest:**
