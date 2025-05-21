@@ -31,4 +31,6 @@ htmlcov/
 # Arquivos temporários de edição
 *.swp
 *~
-EOF
+EOFlog.html
+output.xml
+report.html
