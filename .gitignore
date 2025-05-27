@@ -32,3 +32,4 @@ htmlcov/
 *.swp
 *~
 EOF
+devfile.yaml

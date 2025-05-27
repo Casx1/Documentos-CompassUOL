@@ -1,0 +1,53 @@
+
+# Melhorias Aplicadas no Planejamento de Testes – API ServeRest
+
+Este documento descreve as melhorias implementadas no planejamento de testes da API ServeRest, com foco na ampliação da cobertura, definição de cenários mais completos, estratégias de automação e organização dos testes.
+
+---
+
+1. Cobertura de Testes
+
+A cobertura de testes foi organizada em seis frentes complementares, garantindo a validação completa dos recursos da API:
+
+- Testes Funcionais: validação de comportamento esperado das rotas, como status code, corpo da resposta, headers e mensagens.
+- Testes Negativos: envio de dados inválidos, campos obrigatórios ausentes, formatos incorretos e uso de métodos indevidos.
+- Testes de Borda: cenários com valores mínimos e máximos nos campos, como senhas curtas ou e-mails sem domínio válido.
+- Testes de Segurança: verificação do controle de acesso via tokens, incluindo ausência, expiração e malformação.
+- Testes de Integração: verificação de dependências entre entidades, como exclusão de produtos vinculados a carrinhos.
+- Testes de Regressão: foco nos fluxos principais e críticos, assegurando estabilidade após alterações.
+
+A cobertura estimada contempla aproximadamente 90% dos fluxos principais e alternativos definidos nas User Stories (US 001, US 002, US 003), com foco especial em regras de negócio, autenticação e permissões.
+
+---
+
+2. Expansão de Cenários de Teste
+
+Os cenários de teste foram detalhados e expandidos para incluir variações importantes e casos de erro comuns. Agora são considerados, por exemplo:
+
+- Cadastro de usuários com senha fora do padrão permitido ou e-mail inválido.
+- Autenticação com credenciais incorretas, tokens expirados e ausência de autenticação.
+- Criação e manipulação de produtos com dados duplicados, acesso não autorizado e validação de permissões.
+
+Esses novos cenários permitem testar não só os fluxos esperados (happy path), mas também situações que desafiam as regras de negócio e a segurança da aplicação.
+
+---
+
+3. Automação com Robot Framework
+
+A estratégia de automação foi migrada parcialmente para o Robot Framework, utilizando a biblioteca RequestsLibrary. Os testes automatizados estão organizados por funcionalidade:
+
+- usuarios.robot: cobre os fluxos de criação, edição e exclusão de usuários.
+- login.robot: cobre autenticação, geração e uso de tokens.
+- produtos.robot: cobre criação, listagem, edição e exclusão de produtos, com foco em permissões.
+
+Foi criado um arquivo variables.robot para armazenar dados reutilizáveis, como URLs, tokens e headers. A automação cobre os cenários mais críticos e repetitivos das três User Stories principais, com estrutura pronta para execução em pipelines.
+
+---
+
+4. Organização e Manutenção dos Testes
+
+Para garantir escalabilidade e clareza, os testes foram separados entre manuais e automatizados. Os testes automatizados estão versionados em repositório e seguem uma estrutura modular por funcionalidade. A manutenção é facilitada com uso de recursos reutilizáveis e planejamento para integração contínua com GitHub Actions, permitindo execução automática em push ou pull request.
+
+---
+
+Essas melhorias tornam o planejamento de testes mais robusto, confiável e preparado para garantir a qualidade contínua da API ServeRest.
