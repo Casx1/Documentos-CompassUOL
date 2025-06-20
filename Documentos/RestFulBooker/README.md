@@ -21,10 +21,17 @@ RestFulBooker/
 │   ├── GetBookingIds.robot        # Listagem de IDs de reservas
 │   ├── PartialUpdateBooking.robot # Atualização parcial (PATCH)
 │   ├── Ping.robot                 # Verificação de disponibilidade (Health Check)
-│   ├── UpdateBooking.robot        # Atualização completa da reserva (PUT)
+│   └── UpdateBooking.robot        # Atualização completa da reserva (PUT)
+├── support/
+│   └── common
+│       └── common_resources.robot # Centralização de dependências do projeto
 ├── tests/
-│   └── tests.robot                # Casos de testes organizados por fluxo
-├── requirements.txt              # Dependências do projeto
+│   ├── tests_auth.robot           # Casos de testes rota auth
+│   ├── tests_booking.robot        # Casos de testes rota booking
+│   ├── tests_ping.robot           # Casos de testes rota ping
+│   └── tests_all.robot            # Casos de testes organizados por fluxo
+├── _base.robot                    # Dependências e variáveis do projeto
+├── requirements.txt               # Dependências do projeto
 ```
 
 ##  Executando os Testes
@@ -52,7 +59,7 @@ pip install -r requirements.txt
 ### 4. Executar os testes
 
 ```bash
-robot tests/tests.robot
+robot tests/tests_all.robot
 ```
 
 ##  Observações

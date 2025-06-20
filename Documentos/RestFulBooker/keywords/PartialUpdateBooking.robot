@@ -1,11 +1,11 @@
 *** Settings ***
 Library    RequestsLibrary
 Library    Collections
-Resource    ./_base.robot
-Resource    ./Auth.robot
+Resource    ../_base.robot
 
 *** Keywords ***
 PATCH PartialUpdateBooking
+    [Documentation]    Updates specific fields of an existing booking using PATCH method
     [Arguments]    ${booking_id}
     ${status}    ${token}=    Criando sessao e obtendo token
     ${payload}=    Create Dictionary
@@ -23,3 +23,5 @@ PATCH PartialUpdateBooking
     ...    json=${payload}
     Should Be Equal As Integers    ${response.status_code}    200
     Log    ${response.status_code}
+    Log To Console    ${EMPTY}
+    Log To Console    >>> Booking atualizado com sucesso. Status: ${response.status_code}

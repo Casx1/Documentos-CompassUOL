@@ -30,9 +30,9 @@ htmlcov/
 # Arquivos temporários de edição
 *.swp
 *~
-
 # Ignorar arquivos específicos
-devfile.yaml
+EOFlog.html
 output.xml
 report.html
+devfile.yaml
 log.html

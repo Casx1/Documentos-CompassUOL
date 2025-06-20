@@ -19,7 +19,8 @@ Listando bookings
     GET GetBookingIds
 Buscando bookings por ID
     ${booking_id}=    Set Variable    1
-    GET GetBooking    ${booking_id}
+    ${booking_data}=    GET GetBooking    ${booking_id}
+    Should Not Be Equal    ${booking_data}    ${None}    Falha ao obter dados da reserva
 
 Criando booking
     POST CreateBooking
