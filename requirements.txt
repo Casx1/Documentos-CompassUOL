@@ -1,0 +1,10 @@
+# NOTE: Node.js is required for Playwright (used by robotframework-browser).
+# Make sure Node.js is installed before running `rfbrowser init`.
+
+pip3 install robotframework
+pip3 install robotframework-requests
+pip3 install robotframework-browser
+rfbrowser init
+pip3 install pymongo
+pip3 install robotframework-jsonlibrary
+pip3 install bcrypt
